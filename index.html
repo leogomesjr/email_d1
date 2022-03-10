@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coach D_0</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #000;
+      }
+
+      header,
+      header > figure,
+      header > figure > img {
+        background-color: #212121;
+      }
+
+      header {
+        width: 100%;
+        height: 61px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      header .limit {
+        height: 100%;
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      header figure {
+        width: 148px;
+      }
+
+      header figure img {
+        width: 100%;
+      }
+
+      main .limit {
+        height: 100%;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .container {
+        padding-top: 32px;
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      .section-one {
+        background-color: #ffecc3;
+      }
+
+      .section-one > .container {
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .section-one > .container > h1 {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .section-one > .container > button {
+        width: 90%;
+        min-width: 260px;
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 6px;
+        background-color: #000;
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        margin-bottom: 20px;
+        border-radius: 5px;
+      }
+
+      .section-one > .container > figure {
+        width: 100%;
+        display: flex;
+      }
+
+      .section-one > .container > figure > img {
+        width: 100%;
+      }
+
+      .section-two > .container > p {
+        padding-bottom: 32px;
+      }
+
+      .card {
+        margin-bottom: 40px;
+      }
+
+      .card > figure {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      .card > figure > img {
+        width: 100%;
+      }
+
+      .card > div {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card > div > h3 {
+        margin-bottom: 8px;
+        font-size: 1.25rem;
+      }
+
+      .card > div > p {
+        color: #777777;
+        margin-bottom: 20px;
+      }
+
+      .card > div > button {
+        width: 60%;
+        min-width: 200px;
+        margin: 0 auto;
+        padding: 6px;
+        background-color: #000;
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        border-radius: 5px;
+      }
+
+      .card:nth-child(3) {
+        background-color: #ffebc2;
+        border-radius: 10px;
+        padding: 20px;
+      }
+
+      .card:nth-child(3) > h3 {
+        margin-bottom: 20px;
+      }
+
+      .card:nth-child(3) > figure {
+        margin-bottom: 0px;
+      }
+
+      .card:nth-child(4) {
+        background-color: #def0dc;
+        border-radius: 10px;
+        padding: 20px;
+      }
+
+      .card:nth-child(4) > div > button {
+        background-color: transparent;
+        color: #000;
+      }
+
+      footer {
+        width: 100%;
+        height: 245px;
+        background-color: #181818;
+        color: #fff;
+      }
+
+      footer .limit {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        height: 100%;
+
+        display: grid;
+        grid-template-rows: 30% 70%;
+        row-gap: 10px;
+        padding: 15px;
+      }
+
+      footer .limit div:nth-child(1) > p,
+      span,
+      a,
+      footer .limit div:nth-child(2) > p {
+        font-size: 0.8rem;
+        color: #c9c9c9;
+      }
+
+      footer .limit div:nth-child(1) > p > span,
+      a {
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      footer .limit div:nth-child(1) > p:nth-child(1) {
+        margin-bottom: 5px;
+      }
+
+      footer .limit div:nth-child(2) {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      footer .limit div:nth-child(2) > div {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      footer .limit div:nth-child(2) > div > figure {
+        width: 20px;
+      }
+      footer .limit div:nth-child(2) > div > figure > img {
+        width: 100%;
+      }
+
+      @media (min-width: 600px) {
+        header figure {
+          width: 188px;
+        }
+
+        .section-one > .container > h1 {
+          font-size: 2.4rem;
+        }
+
+        .section-one > .container > button {
+          font-size: 1rem;
+          padding: 10px;
+        }
+
+        .section-two > .container > p {
+          padding-bottom: 32px;
+          font-size: 1.2rem;
+          line-height: 1.8rem;
+          text-align: center;
+        }
+
+        .card {
+          margin-bottom: 40px;
+          display: grid;
+          grid-template-columns: 50% 50%;
+        }
+
+        .card > figure {
+          width: 100%;
+          margin-bottom: 15px;
+        }
+
+        .card > figure > img {
+          width: 100%;
+        }
+
+        .card:nth-child(2) {
+          display: grid;
+          grid-template-columns: 45% 45%;
+          column-gap: 10%;
+        }
+
+        .card:nth-child(2) > figure {
+          background-color: #ffdace;
+          border-radius: 10px;
+
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+        }
+
+        .card > div {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .card > div > h3 {
+          margin-bottom: 8px;
+          font-size: 1.6rem;
+        }
+
+        .card > div > p {
+          color: #777777;
+          margin-bottom: 20px;
+          font-size: 1.2rem;
+        }
+
+        .card > div > button {
+          width: 80%;
+          margin: 0;
+          font-size: 0.8rem;
+          padding: 10px;
+        }
+
+        .card:nth-child(3),
+        .card:nth-child(4) {
+          display: grid;
+          grid-template-columns: 50% 50%;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .card:nth-child(3) > h3 {
+          margin-bottom: 20px;
+          font-size: 1.6rem;
+        }
+
+        .card:nth-child(4) > div {
+          height: 100%;
+          display: flex;
+          justify-content: space-evenly;
+        }
+
+        .card:nth-child(4) > div > h3,
+        .card:nth-child(4) > div > p,
+        .card:nth-child(4) > div > button {
+          margin-bottom: 0px;
+        }
+
+        footer .limit div:nth-child(1) > p,
+        span,
+        a,
+        footer .limit div:nth-child(2) > p {
+          font-size: 1rem;
+        }
+
+        footer .limit div:nth-child(2) {
+          grid-template-columns: 50% 40%;
+          justify-content: space-between;
+        }
+
+        footer .limit div:nth-child(2) > div > figure {
+          width: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="limit">
+        <figure>
+          <img
+            src="./assets/img/7012b26f2ca9c575289ac95777a48475.png"
+            alt="logo-coach"
+          />
+        </figure>
+      </div>
+    </header>
+    <main>
+      <section class="section-one">
+        <div class="container">
+          <h1>
+            [Nome], bem-vindo ao Smart Fit Coach. Agende sua 1ª consulta hoje
+            mesmo!
+          </h1>
+          <button
+            onClick="window.location.href='https://coach.smartfit.com.br/conheca/'"
+          >
+            quero agendar minha consulta
+          </button>
+          <figure>
+            <img
+              src="./assets/img/cb78e62efd8250df9e029a4de4cd634a.jpg"
+              alt="bem-vindo"
+            />
+          </figure>
+        </div>
+      </section>
+      <div class="limit">
+        <section class="section-two">
+          <div class="container">
+            <p>
+              Agora, você tem o acompanhamento exclusivo do nosso time de
+              professores para ajustar a sua rotina de exercícios e conquistar
+              ainda mais resultados. Veja tudo o que o Smart Fit Coach oferece.
+            </p>
+            <div class="card">
+              <figure>
+                <img
+                  src="./assets/img/40e5c278f89a73d0d607a6bb93881166.png"
+                  alt="personal"
+                />
+              </figure>
+              <div>
+                <h3>Consultoria por chamada de vídeo</h3>
+                <p>
+                  Agende agora mesmo o seu atendimento com um professores.
+                  Estamos ansiosos para transformar seu corpo e sua saúde!
+                </p>
+                <button
+                  onClick="window.location.href='https://coach.smartfit.com.br/conheca/'"
+                >
+                  agende agora mesmo
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <h3>
+                Seu treino personalizado, para fazer na academia ou onde quiser,
+                fica disponível no Smart Fit App
+              </h3>
+              <figure>
+                <img
+                  src="./assets/img/6afea9b57d7ade5d6e8ccc76e1db8241.png"
+                  alt="clock"
+                />
+              </figure>
+            </div>
+            <div class="card">
+              <figure>
+                <img
+                  src="./assets/img/febf03a40957540c3fec8ffc6c18189a.png"
+                  alt="telefone"
+                />
+              </figure>
+              <div>
+                <h3>Tire suas dúvidas com nosso time via WhatsApp</h3>
+                <p>(segunda a sexta das 09h às 18h)</p>
+                <button
+                  onClick="window.location.href='https://bit.ly/Atendimento-Coach'"
+                >
+                  é só clicar aqui
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="limit">
+        <div>
+          <p>
+            Para agendar novos atendimentos,
+            <a
+              href="https://coachonline.simplybook.me/v2/#book/service/1/count/1/provider/any/"
+              >clique aqui</a
+            >
+            e, para gerenciar seus agendamentos,
+            <a
+              href="https://coachonline.simplybook.me/v2/#client/bookings/type/upcoming"
+              >clique aqui</a
+            >.
+          </p>
+          <p>
+            Tem dúvidas e sugestões? Entre em contato com
+            <span>coach@smartfit.com</span>.
+          </p>
+        </div>
+        <div>
+          <p>
+            Atenção: você só será cobrado após 7 dias da adesão, combinado? Se
+            não for solicitado o cancelamento, o plano é ativado,
+            automaticamente. São R$ 49,90 mensais com permanência mínima de 3
+            meses. Em anexo, está o Termo de Adesão completo para você conferir.
+          </p>
+          <div>
+            <a href="https://www.instagram.com/smartfit/">
+              <figure>
+                <img
+                  src="./assets/img/9cc7f6501cf952cd38a30d53c17cc4f7.png"
+                  alt="instagram"
+                />
+              </figure>
+            </a>
+            <a href="https://pt-br.facebook.com/SmartFit.Oficial/">
+              <figure>
+                <img
+                  src="./assets/img/9b55eab12614b7e3841d5d8afe3b98e9.png"
+                  alt="facebook"
+                />
+              </figure>
+            </a>
+            <a href="https://twitter.com/SmartFitoficial">
+              <figure>
+                <img
+                  src="./assets/img/277f87b7c904701626f94f0986ba4f53.png"
+                  alt="twitter"
+                />
+              </figure>
+            </a>
+            <a href="https://www.youtube.com/channel/UCJi60eWE1f3OMx9G4V2LDMw">
+              <figure>
+                <img
+                  src="./assets/img/047ad283aacf0cb7c79ff695f2964943.png"
+                  alt="youtube"
+                />
+              </figure>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
