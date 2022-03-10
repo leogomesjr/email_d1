@@ -68,7 +68,7 @@
       }
 
       main section div.container {
-        width: 80%;
+        width: 90%;
         max-width: 320px;
         margin: 0 auto;
         padding-top: 40px;
@@ -95,9 +95,114 @@
         border-radius: 4px;
         background-color: #212121;
         color: #ffffff;
+        font-size: 0.8rem;
         font-weight: bold;
         text-transform: uppercase;
         margin-bottom: 16px;
+      }
+
+      main section:nth-child(2) {
+        background-color: #fff;
+      }
+
+      main section:nth-child(2) div.container {
+      }
+
+      main section:nth-child(2) div.container p {
+        font-size: 1rem;
+        margin-bottom: 64px;
+      }
+
+      main section:nth-child(2) div.container div:nth-child(2) {
+        background-color: #ffebc2;
+        border-radius: 10px;
+        padding: 15px 10px;
+
+        display: grid;
+        grid-template-rows: 50% 50%;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 32px;
+      }
+
+      main section:nth-child(2) div.container div:nth-child(2) div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main section:nth-child(2) div.container div:nth-child(2) div p {
+        margin-bottom: 24px;
+      }
+
+      main section:nth-child(2) div.container div:nth-child(2) div button {
+        font-size: 0.7rem;
+      }
+
+      main section:nth-child(2) div.container div:nth-child(2) figure {
+        width: 60%;
+        margin: 0 auto;
+      }
+
+      main section:nth-child(2) div.container div:nth-child(2) figure img {
+        width: 100%;
+      }
+
+      /* aqui */
+
+      main section:nth-child(2) div.container div:nth-child(3) {
+        border-radius: 10px;
+        padding: 15px 10px;
+
+        display: grid;
+        grid-template-rows: 30% 60%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main section:nth-child(2) div.container div:nth-child(3) figure {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 16px;
+      }
+
+      main section:nth-child(2) div.container div:nth-child(3) figure img {
+        width: 100%;
+        /* display: flex; */
+      }
+
+      main section:nth-child(2) div.container div:nth-child(3) div {
+        background-color: #fff;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main section:nth-child(2) div.container div:nth-child(3) div p {
+        margin-bottom: 15px;
+        color: #212121;
+        font-size: 0.9rem;
+      }
+
+      main
+        section:nth-child(2)
+        div.container
+        div:nth-child(3)
+        div
+        p:nth-child(1) {
+        /* color: red; */
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      main section:nth-child(2) div.container div:nth-child(3) div button {
+        font-size: 0.7rem;
+        margin-bottom: 0px;
       }
 
       @media (min-width: 600px) {
@@ -131,6 +236,50 @@
         <figure>
           <img src="./assets/img/img-01.png" alt="calendar" />
         </figure>
+      </section>
+      <section>
+        <div class="container">
+          <p>
+            Um acompanhamento individualizado faz total diferença na hora de
+            conquistar melhores resultados! Por isso, viemos te lembrar que você
+            já pode agendar seu atendimento online com nosso time de
+            consultores. É muito simples, rápido e prático!
+          </p>
+          <div>
+            <div>
+              <p>
+                É só agendar o atendimento online e escolher o seu foco:
+                emagrecimento, saúde ou ganho de massa muscular.
+              </p>
+              <button>marque agora sua consulta</button>
+            </div>
+            <figure>
+              <img src="./assets/img/img-02.png" alt="emagrecimento" />
+            </figure>
+          </div>
+          <div>
+            <figure>
+              <img src="./assets/img/img-03.png" alt="professor" />
+            </figure>
+            <div>
+              <p>
+                É sempre bom ter alguém ao nosso lado para dar aquele incentivo!
+              </p>
+
+              <p>
+                O Coach irá montar uma rotina totalmente individualizada, de
+                acordo com o seu objetivo, seu nível de condicionamento e o
+                local em que você treina.
+              </p>
+
+              <p>
+                Além disso, os exercícios sempre estarão disponíveis no Smart
+                Fit App (com vídeo explicativo!).
+              </p>
+              <button>marque agora sua consulta</button>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer>footer</footer>
