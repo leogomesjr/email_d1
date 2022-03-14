@@ -202,49 +202,48 @@
       }
 
       main section:nth-child(2) div.container div:nth-child(3) div button {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         margin-bottom: 0px;
       }
 
-      footer div.teste1 {
-        padding: 10px;
-        background-color: #212121;
+      footer {
+        border-top: 1px solid #def0dc;
+        width: 100%;
+        background-color: #fff;
+        padding: 30px 20px;
       }
 
-      footer div.teste1 div.container,
-      footer div.teste2 div.container {
+      footer div.limit {
         max-width: 600px;
         margin: 0 auto;
       }
 
-      footer div.teste1 div.container p,
-      a,
-      span {
-        color: white;
-        font-size: 0.8rem;
+      footer div.limit:first-child {
+        display: grid;
+        grid-template-rows: 50% 50%;
+        row-gap: 20px;
       }
 
-      footer div.teste1 div.container a,
-      span {
-        text-decoration: underline;
-        font-weight: bold;
-      }
-
-      footer div.teste1 div.container a {
+      footer div.limit:first-child > div:last-child > a {
         cursor: pointer;
       }
 
-      footer div.teste1 div.container p:first-child {
-        margin-bottom: 10px;
+      footer div.limit:last-child {
+        margin-top: 20px;
       }
 
-      footer div.teste2 {
-        padding: 10px;
-        background-color: #181818;
+      footer div.limit:last-child > p {
+        text-align: center;
       }
-      footer div.teste2 div.container p {
-        color: white;
-        font-size: 0.7rem;
+
+      footer div.limit:first-child > div:first-child > p:last-child {
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+
+      footer div.limit:first-child > div:last-child {
+        display: flex;
+        justify-content: space-evenly;
       }
 
       @media (min-width: 600px) {
@@ -255,6 +254,7 @@
         main section div.container button {
           padding: 12px 24px;
           font-size: 0.9rem;
+          cursor: pointer;
         }
 
         main section:nth-child(2) div.container div:nth-child(3) {
@@ -264,6 +264,7 @@
 
         main section:nth-child(2) div.container div:nth-child(3) div button {
           font-size: 0.8rem;
+          cursor: pointer;
         }
 
         main section:nth-child(2) div.container p {
@@ -306,6 +307,7 @@
           width: 90%;
           font-size: 0.9rem;
           margin-bottom: 0px;
+          cursor: pointer;
         }
 
         main section:nth-child(2) div.container div:nth-child(3) {
@@ -330,6 +332,22 @@
 
         main section:nth-child(2) div.container div:nth-child(3) figure {
           width: 100%;
+        }
+
+        footer div.limit:first-child {
+          display: grid;
+          grid-template-columns: 60% 40%;
+          grid-template-rows: 1fr;
+          row-gap: 0px;
+          margin-bottom: 40px;
+        }
+
+        footer div.limit:last-child {
+          margin-top: 0px;
+        }
+
+        footer div.limit:last-child > p {
+          text-align: left;
         }
       }
     </style>
@@ -358,10 +376,10 @@
           >
             agende agora mesmo!
           </button>
+          <figure>
+            <img src="./assets/img/img-01.png" alt="calendar" />
+          </figure>
         </div>
-        <figure>
-          <img src="./assets/img/img-01.png" alt="calendar" />
-        </figure>
       </section>
       <section>
         <div class="container">
@@ -417,36 +435,44 @@
       </section>
     </main>
     <footer>
-      <div class="teste1">
-        <div class="container">
+      <div class="limit">
+        <div>
+          <p>Até breve,</p>
           <p>
-            Para agendar novos atendimentos,
-            <a
-              href="https://coachonline.simplybook.me/v2/#book/service/1/count/1/provider/any/"
-              >clique aqui</a
-            >
-            e, para gerenciar seus agendamentos,
-            <a
-              href="https://coachonline.simplybook.me/v2/#client/bookings/type/upcoming"
-              >clique aqui</a
-            >.
+            <span>Equipe Smart Fit Coach</span>
           </p>
+        </div>
 
-          <p>
-            Tem dúvidas e sugestões? Entre em contato com
-            <span>coach@smartfit.com</span>.
-          </p>
+        <div>
+          <a href="https://www.youtube.com/channel/UCJi60eWE1f3OMx9G4V2LDMw">
+            <figure>
+              <img src="./assets/img/youtubelogo.png" alt="youtube" />
+            </figure>
+          </a>
+          <a href="https://twitter.com/SmartFitoficial">
+            <figure>
+              <img src="./assets/img/twitterlogo.png" alt="twitter" />
+            </figure>
+          </a>
+          <a href="https://open.spotify.com/user/smartfit_oficial">
+            <figure>
+              <img src="./assets/img/spotifylogo.png" alt="spotfy" />
+            </figure>
+          </a>
+          <a href="https://www.instagram.com/smartfit/">
+            <figure>
+              <img src="./assets/img/instagramlogo.png" alt="instagram" />
+            </figure>
+          </a>
+          <a href="https://pt-br.facebook.com/SmartFit.Oficial/">
+            <figure>
+              <img src="./assets/img/facebooklogo.png" alt="facebook" />
+            </figure>
+          </a>
         </div>
       </div>
-      <div class="teste2">
-        <div class="container">
-          <p>
-            Atenção: você só será cobrado após 7 dias da adesão, combinado? Se
-            não for solicitado o cancelamento, o plano é ativado,
-            automaticamente. São R$ 49,90 mensais com permanência mínima de 3
-            meses. Em anexo, está o Termo de Adesão completo para você conferir.
-          </p>
-        </div>
+      <div class="limit">
+        <p>Smart Fit Academias, 2022</p>
       </div>
     </footer>
   </body>
